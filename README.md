@@ -1,9 +1,22 @@
-# telescope-rage 
+# rage.nvim
 
 Port of my old plugin [helm-rage](https://github.com/bomgar/helm-rage)
 
 
-A telescope source for raging. Allows you to spice up your commit message with rage comics or various memes.
+Uses vim.ui.select to insert memes.
 
 
-`<cmd>Telescope rage<CR>`
+## Installation
+
+lazy.nvim
+
+```lua
+return {
+        {
+            "bomgar/rage.nvim",
+            keys = {
+                { "<leader>fr", function() require("rage").rage() end, desc = "rage" }
+            }
+    }
+}
+```
